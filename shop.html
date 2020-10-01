@@ -23,7 +23,7 @@ font-family:Rubik Mono One;
 font-size:1.6rem;
 }
 * {
-box-sizing:border-box;
+box-sizing:auto;
 }
 
 .row {
@@ -32,9 +32,22 @@ height: 25%;
 width: 100%;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .column {
+float:left;
 flex:33.33%;
 padding:2px;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
 }
 
 a {
@@ -103,18 +116,17 @@ padding-right: 25px;
 Shyheimio
 </div>
 <div class='row'>
-  <div class='column'>
-  <img src='shyheimio-reflective-text.png' style='height:175%'>
-  </div>
-  <div class='column'>
-  <img src='shyheimio-white-text.png' style='height:175%'>
-  </div>
-  <div class='column'>
-  <img src='shyheimio-red-text.png' style='height:175%'>
-  </div>
 <div class='column'>
-<img src='shyheimio-black-text.png' style='height:175%'>
-
-  </div>
+<img src='shyheimio-reflective-text.png' style='width:100%'>
+</div>
+<div class='column'>
+<img src='shyheimio-white-text.png' style='width:100%'>
+</div>
+<div class='column'>
+<img src='shyheimio-red-text.png' style='width:100%'>
+</div>
+<div class='column'>
+<img src='shyheimio-black-text.png' style='width:100%'>
+</div>
 </p>
 </body>
